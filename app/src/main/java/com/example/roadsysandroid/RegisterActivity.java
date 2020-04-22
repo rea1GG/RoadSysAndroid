@@ -1,5 +1,6 @@
 package com.example.roadsysandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String json = getJson(registerName.getText().toString(),registerPassword.getText().toString());
         final RequestBody requestBody = RequestBody.create(JSON,json);
         if(registerPassword.getText().toString().equals(confirmPassword.getText().toString())){
-            HttpUtil.sendOkHttpResponse("http://192.168.76.1:8080/android/login",requestBody, new Callback(){
+            HttpUtil.sendOkHttpResponse("http://192.168.76.1:8080/android/register",requestBody, new Callback(){
 
                 @Override
                 public void onFailure(Call call, IOException e) {
@@ -55,6 +56,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             @Override
                             public void run() {
                                 Toast.makeText(RegisterActivity.this,"注册成功！！",Toast.LENGTH_SHORT).show();
+                                Intent goToRegister = new Intent(RegisterActivity.this,MainActivity.class);
+                                startActivity(goToRegister);
                             }
                         });
                     }
