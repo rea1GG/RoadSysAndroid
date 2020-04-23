@@ -18,6 +18,7 @@
 
             android:layout_height="100dp"
             android:gravity="center"
+            android:onClick="goToUpload"
             android:text="添加需要维护的道路信息" />
 
         <Button
