@@ -26,7 +26,8 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:gravity="center"
-            android:text="查询单个学生成绩" />
+            android:onClick="goToRoadInfoQuery"
+            android:text="查询所有待维修道路信息" />
 
         <Button
             android:id="@+id/btn_delete"

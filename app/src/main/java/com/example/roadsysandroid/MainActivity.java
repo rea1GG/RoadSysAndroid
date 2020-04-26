@@ -10,6 +10,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goToUpload(View v){
         Intent intent = new Intent(MainActivity.this,UploadActivity.class);
+        startActivity(intent);
+    }
+    public void goToRoadInfoQuery(View view){
+        Intent intent = new Intent(MainActivity.this,ProtectRoadActivity.class);
         startActivity(intent);
     }
     /*

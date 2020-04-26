@@ -265,8 +265,11 @@ public class UploadActivity extends AppCompatActivity {
     //上传功能
     public void fileUpload(Callback callback) {
 
-        // 获得输入框中的路径
+        // 获得输入框中的数据
         EditText prInfo = (EditText) findViewById(R.id.prInfo);
+        EditText roadArea = (EditText) findViewById(R.id.roadArea);
+        EditText roadInfo = (EditText) findViewById(R.id.roadInfo);
+        EditText roadName = (EditText) findViewById(R.id.roadName);
         File file = new File(path);
         System.out.println(file.getName());
         OkHttpClient client = new OkHttpClient();
@@ -276,6 +279,9 @@ public class UploadActivity extends AppCompatActivity {
                 .addFormDataPart("file", file.getName(), RequestBody.create(MediaType.parse("text/plain"), file)) // 提交图片，第一个参数是键（name="第一个参数"），第二个参数是文件名，第三个是一个RequestBody
                 .addFormDataPart("userId", "1") // 提交普通字段
                 .addFormDataPart("prInfo", prInfo.getText().toString())
+                .addFormDataPart("roadArea",roadArea.getText().toString())
+                .addFormDataPart("roadName",roadName.getText().toString())
+                .addFormDataPart("roadInfo",roadInfo.getText().toString())
                 .build();
 
         // POST请求

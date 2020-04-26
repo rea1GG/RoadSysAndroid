@@ -19,22 +19,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/descriptionTitle"
-        android:layout_width="135dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="40dp"
-        android:text="道路情况描述"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <EditText
         android:id="@+id/prInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="23dp"
         android:ems="10"
         android:hint="简单描述道路情况"
@@ -43,18 +32,15 @@
         app:layout_constraintStart_toStartOf="@+id/descriptionTitle"
         app:layout_constraintTop_toBottomOf="@+id/descriptionTitle" />
 
-
-    <Button
-        android:id="@+id/addPic"
-        android:layout_width="133dp"
-        android:layout_height="126dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="140dp"
-        android:clickable="true"
-        android:onClick="initPopUpWindow"
-        android:text="选择图片"
-        android:textSize="24dp"
+    <TextView
+        android:id="@+id/descriptionTitle"
+        android:layout_width="135dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="236dp"
+        android:text="道路情况描述"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -62,7 +48,7 @@
         android:id="@+id/imageView"
         android:layout_width="133dp"
         android:layout_height="126dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:background="@color/colorAccent"
@@ -70,25 +56,97 @@
         app:layout_constraintTop_toBottomOf="@+id/prInfo"
         app:srcCompat="@android:drawable/divider_horizontal_dim_dark" />
 
-    <ImageButton
-        android:id="@+id/goBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/descriptionTitle"
-        app:layout_constraintTop_toTopOf="@+id/title"
-        app:srcCompat="@drawable/abc_vector_test" />
-
     <Button
         android:id="@+id/commitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="28dp"
         android:text="上传"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addPic" />
+
+    <Button
+        android:id="@+id/addPic"
+        android:layout_width="133dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="320dp"
+        android:clickable="true"
+        android:onClick="initPopUpWindow"
+        android:text="选择图片"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageButton
+        android:id="@+id/goBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/descriptionTitle"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="输入道路所在区域"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入道路名字"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toBottomOf="@+id/roadArea" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="输入道路详细信息"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toTopOf="@+id/roadName" />
+
+    <EditText
+        android:id="@+id/roadArea"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="输入需要维护道路所在区域"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/roadName"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="输入需要维护道路名字"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/roadInfo"
+        android:layout_width="302dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="输入需要维护道路详细信息"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
