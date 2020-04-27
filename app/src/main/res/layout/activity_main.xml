@@ -22,33 +22,40 @@
             android:text="添加需要维护的道路信息" />
 
         <Button
-            android:id="@+id/btn_single"
+            android:id="@+id/btn_need_query"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:gravity="center"
             android:onClick="goToRoadInfoQuery"
             android:text="查询所有待维修道路信息" />
-
         <Button
-            android:id="@+id/btn_delete"
+            android:id="@+id/btn_work_query_all"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:gravity="center"
-            android:text="删除学生成绩" />
-
+            android:onClick="goToQueryAllWorkInfo"
+            android:text="查询所有工作记录" />
         <Button
-            android:id="@+id/btn_add"
+            android:id="@+id/btn_work_query_time"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:gravity="center"
-            android:text="添加学生成绩" />
+            android:text="按时间查询工作记录" />
 
         <Button
-            android:id="@+id/btn_updatestu"
+            android:id="@+id/btn_work_query_area"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:gravity="center"
-            android:text="修改学生成绩" />
+            android:text="按地区查询工作记录" />
+
+        <Button
+            android:id="@+id/btn_work_query_name"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="按用户名字查询工作记录" />
+
     </LinearLayout>
 
 </RelativeLayout>

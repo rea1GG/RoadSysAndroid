@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RoadInfoActivity"></activity>
+        <activity android:name=".WorkInfoActivity"></activity>
+        <activity android:name=".RoadInfoActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

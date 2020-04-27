@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("userId",userId);
         startActivity(intent);
     }
+    public void goToQueryAllWorkInfo(View view){
+        Intent intent = new Intent(MainActivity.this,WorkInfoActivity.class);
+        intent.putExtra("userId",userId);
+        startActivity(intent);
+    }
     /*
     获取权限
  */
