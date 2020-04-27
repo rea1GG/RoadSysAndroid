@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("userId",userId);
         startActivity(intent);
     }
+    public void goToQuertAreaWorkInfo(View view){
+        Intent intent = new Intent(MainActivity.this,QueryWorkAreaActivity.class);
+        intent.putExtra("userId",userId);
+        startActivity(intent);
+    }
     /*
     获取权限
  */

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_single_student"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QueryWorkAreaActivity">
+    <LinearLayout
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="40dp"
+            android:text="请输入查询地区："
+            android:layout_gravity="center_horizontal"
+            android:layout_width="140dp"
+            android:gravity="center"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/et_id"
+            android:hint="请输入地区"
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/btn_look"
+            android:text="查看"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/work_info_query_area"
+        android:layout_below="@+id/edit"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_wi_time_urrId"
+            android:text="ID"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_time_userName"
+            android:text="用户名"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_time_urrTime"
+            android:text="时间"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_time_urrInfo"
+            android:text="描述"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/tv_wi_time_roadArea"
+            android:text="地区"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_time_roadName"
+            android:text="街道"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/work_info_view"
+        android:layout_below="@+id/work_info_query_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
