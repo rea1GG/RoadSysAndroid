@@ -13,19 +13,23 @@ import android.view.View;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-
+    String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        userId = intent.getStringExtra("userId");
         setContentView(R.layout.activity_main);
         verifyStoragePermissions(this);
     }
     public void goToUpload(View v){
         Intent intent = new Intent(MainActivity.this,UploadActivity.class);
+        intent.putExtra("userId",userId);
         startActivity(intent);
     }
     public void goToRoadInfoQuery(View view){
         Intent intent = new Intent(MainActivity.this,ProtectRoadActivity.class);
+        intent.putExtra("userId",userId);
         startActivity(intent);
     }
     /*

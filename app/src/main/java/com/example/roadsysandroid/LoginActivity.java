@@ -60,15 +60,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String data=response.body().string();
+                final String data=response.body().string();
                 System.out.println(data);
-
+                final String userId = data.substring(42,43);
                 if (data.substring(8,11).equals("200")){
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             Toast.makeText(LoginActivity.this,"登录成功！",Toast.LENGTH_SHORT).show();
                             Intent goIntent=new Intent(LoginActivity.this,MainActivity.class);
+                            goIntent.putExtra("userId",userId);
                             startActivity(goIntent);
                         }
                     });

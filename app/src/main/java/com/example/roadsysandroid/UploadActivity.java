@@ -115,6 +115,7 @@ public class UploadActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(UploadActivity.this, "上传失败！", Toast.LENGTH_SHORT).show();
+
                             }
                         });
                     }
@@ -125,6 +126,8 @@ public class UploadActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(UploadActivity.this, "上传成功！", Toast.LENGTH_SHORT).show();
+                                Intent over = new Intent(UploadActivity.this,MainActivity.class);
+                                startActivity(over);
                             }
                         });
                     }
@@ -270,6 +273,8 @@ public class UploadActivity extends AppCompatActivity {
         EditText roadArea = (EditText) findViewById(R.id.roadArea);
         EditText roadInfo = (EditText) findViewById(R.id.roadInfo);
         EditText roadName = (EditText) findViewById(R.id.roadName);
+        Intent intent = getIntent();
+        String userId = intent.getStringExtra("userId");
         File file = new File(path);
         System.out.println(file.getName());
         OkHttpClient client = new OkHttpClient();
@@ -277,7 +282,7 @@ public class UploadActivity extends AppCompatActivity {
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
                 .addFormDataPart("file", file.getName(), RequestBody.create(MediaType.parse("text/plain"), file)) // 提交图片，第一个参数是键（name="第一个参数"），第二个参数是文件名，第三个是一个RequestBody
-                .addFormDataPart("userId", "1") // 提交普通字段
+                .addFormDataPart("userId", userId) // 提交普通字段
                 .addFormDataPart("prInfo", prInfo.getText().toString())
                 .addFormDataPart("roadArea",roadArea.getText().toString())
                 .addFormDataPart("roadName",roadName.getText().toString())

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.os.Handler;
@@ -112,7 +113,11 @@ public class ProtectRoadActivity extends AppCompatActivity {
                     adapter.setOnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
                         @Override
                         public void onItemClick(int position) {
-                            Toast.makeText(ProtectRoadActivity.this,"您点击了"+position+"行", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(ProtectRoadActivity.this,RoadInfoActivity.class);
+                            String prId = (String)list.get(position).get("prId");
+                            intent.putExtra("prId",prId);
+                            startActivity(intent);
+//                            Toast.makeText(ProtectRoadActivity.this,"您点击了"+list.get(position).get("prId")+"行", Toast.LENGTH_SHORT).show();
                         }
                     });
                     LinearLayoutManager layoutManager=new LinearLayoutManager(ProtectRoadActivity.this);
