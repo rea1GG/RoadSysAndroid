@@ -52,7 +52,7 @@ public class WorkInfoActivity extends AppCompatActivity {
         queryAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HttpUtil.sendOkHttpRequest("http://192.168.76.1:8080/android/work/query/all", new Callback() {
+                HttpUtil.sendOkHttpRequest("http://116.62.117.207:8080/android/work/query/all", new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
                         System.out.println(e);

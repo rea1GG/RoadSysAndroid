@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String json = getJson(registerName.getText().toString(),registerPassword.getText().toString());
         final RequestBody requestBody = RequestBody.create(JSON,json);
         if(registerPassword.getText().toString().equals(confirmPassword.getText().toString())){
-            HttpUtil.sendOkHttpResponse("http://192.168.76.1:8080/android/register",requestBody, new Callback(){
+            HttpUtil.sendOkHttpResponse("http://116.62.117.207:8080/android/register",requestBody, new Callback(){
 
                 @Override
                 public void onFailure(Call call, IOException e) {

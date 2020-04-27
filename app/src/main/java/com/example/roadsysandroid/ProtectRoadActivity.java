@@ -55,7 +55,7 @@ public class ProtectRoadActivity extends AppCompatActivity {
         query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HttpUtil.sendOkHttpRequest("http://192.168.76.1:8080/android/need/query", new Callback() {
+                HttpUtil.sendOkHttpRequest("http://116.62.117.207:8080/android/need/query", new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
                         System.out.println(e);

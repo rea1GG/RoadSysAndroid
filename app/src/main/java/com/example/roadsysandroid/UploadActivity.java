@@ -127,6 +127,9 @@ public class UploadActivity extends AppCompatActivity {
                             public void run() {
                                 Toast.makeText(UploadActivity.this, "上传成功！", Toast.LENGTH_SHORT).show();
                                 Intent over = new Intent(UploadActivity.this,MainActivity.class);
+                                Intent intent = getIntent();
+                                String userId = intent.getStringExtra("userId");
+                                over.putExtra("userId",userId);
                                 startActivity(over);
                             }
                         });
@@ -139,6 +142,9 @@ public class UploadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent goBack = new Intent(UploadActivity.this, MainActivity.class);
+                Intent intent = getIntent();
+                String userId = intent.getStringExtra("userId");
+                goBack.putExtra("userId",userId);
                 startActivity(goBack);
             }
         });
@@ -291,7 +297,7 @@ public class UploadActivity extends AppCompatActivity {
 
         // POST请求
         Request request = new Request.Builder()
-                .url("http://192.168.76.1:8080/android/need/upload")
+                .url("http://116.62.117.207:8080/android/need/upload")
                 .post(requestBody)
                 .build();
         client.newCall(request).enqueue(callback);

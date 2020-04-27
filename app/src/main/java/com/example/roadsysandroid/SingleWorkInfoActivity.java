@@ -61,7 +61,7 @@ public class SingleWorkInfoActivity extends AppCompatActivity {
                 Intent intent = getIntent();
                 String Id = intent.getStringExtra("urrId");
                 recyclerView = (RecyclerView) findViewById(R.id.single_info);
-                HttpUtil.sendOkHttpRequest("http://192.168.76.1:8080/android/work/query/id/" + Id, new Callback() {
+                HttpUtil.sendOkHttpRequest("http://116.62.117.207:8080/android/work/query/id/" + Id, new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
                         System.out.println(e);
@@ -118,9 +118,9 @@ public class SingleWorkInfoActivity extends AppCompatActivity {
             map.put("urrTime", urrTime);
             map.put("urrInfo", urrInfo);
 //            map.put("prPic", prPic);
-            map.put("urrFirstpic", getImage("http://116.62.117.207"+urrFirstpic));
-            map.put("urrSecondpic", getImage("http://116.62.117.207"+urrSecondpic));
-            map.put("urrThirdpic", getImage("http://116.62.117.207"+urrThirdpic));
+            map.put("urrFirstpic", getImage("http://116.62.117.207:8080"+urrFirstpic));
+            map.put("urrSecondpic", getImage("http://116.62.117.207:8080"+urrSecondpic));
+            map.put("urrThirdpic", getImage("http://116.62.117.207:8080"+urrThirdpic));
             map.put("roadArea", roadArea);
             map.put("roadName", roadName);
             map.put("roadInfo", roadInfo);

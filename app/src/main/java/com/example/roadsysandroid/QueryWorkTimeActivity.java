@@ -63,7 +63,7 @@ public class QueryWorkTimeActivity extends AppCompatActivity {
                 String endTime = eYear.getText().toString() + "-" +eMonth.getText().toString()+"-" + eDay.getText().toString() + " 24:00:00";
                 System.out.println(beginTime);
                 System.out.println(endTime);
-                HttpUtil.sendOkHttpRequest("http://192.168.76.1:8080/android/work/query/time?beginTime=" + beginTime + "&endTime=" + endTime, new Callback() {
+                HttpUtil.sendOkHttpRequest("http://116.62.117.207:8080/android/work/query/time?beginTime=" + beginTime + "&endTime=" + endTime, new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
                         System.out.println(e);

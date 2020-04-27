@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         EditText password = (EditText)findViewById(R.id.pword);
         String json=getJson(userName.getText().toString(),password.getText().toString());
         RequestBody requestBody=RequestBody.create(JSON,json);
-        HttpUtil.sendOkHttpResponse("http://192.168.76.1:8080/android/login",requestBody,new Callback(){
+        HttpUtil.sendOkHttpResponse("http://116.62.117.207:8080/android/login",requestBody,new Callback(){
 
             @Override
             public void onFailure(Call call, IOException e) {

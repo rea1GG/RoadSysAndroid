@@ -56,7 +56,7 @@ public class QueryWorkAreaActivity extends AppCompatActivity {
         queryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HttpUtil.sendOkHttpRequest("http://192.168.76.1:8080/android/work/query/area/" + roadArea.getText().toString(), new Callback() {
+                HttpUtil.sendOkHttpRequest("http://116.62.117.207:8080/android/work/query/area/" + roadArea.getText().toString(), new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
                         System.out.println(e);

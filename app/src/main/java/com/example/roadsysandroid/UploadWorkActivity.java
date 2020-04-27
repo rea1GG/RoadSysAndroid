@@ -374,7 +374,7 @@ public class UploadWorkActivity extends AppCompatActivity {
 
         // POST请求
         Request request = new Request.Builder()
-                .url("http://192.168.76.1:8080/android/work/upload")
+                .url("http://116.62.117.207:8080/android/work/upload")
                 .post(requestBody)
                 .build();
         client.newCall(request).enqueue(callback);

@@ -77,7 +77,7 @@ public class RoadInfoActivity extends AppCompatActivity {
                 String Id = intent.getStringExtra("prId");
 
                 recyclerView = (RecyclerView) findViewById(R.id.recycler);
-                HttpUtil.sendOkHttpRequest("http://192.168.76.1:8080/android/need/query/id/" + Id, new Callback() {
+                HttpUtil.sendOkHttpRequest("http://116.62.117.207:8080/android/need/query/id/" + Id, new Callback() {
 
                     @Override
                     public void onFailure(Call call, IOException e) {
@@ -132,7 +132,8 @@ public class RoadInfoActivity extends AppCompatActivity {
             map.put("prTime", prTime);
             map.put("prInfo", prInfo);
 //            map.put("prPic", prPic);
-            map.put("prPic", getImage("http://116.62.117.207"+prPic));
+            System.out.println("图片地址："+"http://116.62.117.207:8080"+prPic);
+            map.put("prPic", getImage("http://116.62.117.207:8080"+prPic));
             map.put("roadArea", roadArea);
             map.put("roadName", roadName);
             map.put("roadInfo", roadInfo);
