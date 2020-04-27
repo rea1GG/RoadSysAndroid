@@ -47,13 +47,14 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:gravity="center"
-            android:onClick="goToQuertAreaWorkInfo"
+            android:onClick="goToQueryAreaWorkInfo"
             android:text="按地区查询工作记录" />
 
         <Button
             android:id="@+id/btn_work_query_name"
             android:layout_width="200dp"
             android:layout_height="100dp"
+            android:onClick="goToQueryNameWorkInfo"
             android:gravity="center"
             android:text="按用户名字查询工作记录" />
 
