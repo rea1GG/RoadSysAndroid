@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -120,11 +121,11 @@ public class QueryWorkTimeActivity extends AppCompatActivity {
 
                         @Override
                         public void onItemClick(int position) {
-//                            Intent intent = new Intent(WorkInfoActivity.this,RoadInfoActivity.class);
-//                            String urrId = (String)list.get(position).get("urrId");
-//                            intent.putExtra("urrId",urrId);
-//                            startActivity(intent);
-                            Toast.makeText(QueryWorkTimeActivity.this,""+list.get(position).get("urrId"),Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(QueryWorkTimeActivity.this,SingleWorkInfoActivity.class);
+                            String urrId = (String)list.get(position).get("urrId");
+                            intent.putExtra("urrId",urrId);
+                            startActivity(intent);
+//                            Toast.makeText(QueryWorkTimeActivity.this,""+list.get(position).get("urrId"),Toast.LENGTH_SHORT).show();
                         }
                     });
                     LinearLayoutManager layoutManager=new LinearLayoutManager(QueryWorkTimeActivity.this);

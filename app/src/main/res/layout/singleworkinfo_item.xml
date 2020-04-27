@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="170dp"
+        android:orientation="vertical"
+        android:layout_height="500dp">
+        <TextView
+            android:id="@+id/tv_workInfo_urrId"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="0.5"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_workInfo_userName"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_workInfo_urrTime"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_workInfo_urrInfo"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+
+        <ImageView
+            android:id="@+id/tv_workInfo_urrFirstpic"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+
+        <ImageView
+            android:id="@+id/tv_workInfo_urrSecondpic"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+
+        <ImageView
+            android:id="@+id/tv_workInfo_urrThirdpic"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_workInfo_roadArea"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_workInfo_roadName"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_workInfo_roadInfo"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+</RelativeLayout>

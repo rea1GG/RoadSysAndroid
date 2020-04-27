@@ -110,11 +110,11 @@ public class WorkInfoActivity extends AppCompatActivity {
 
                         @Override
                         public void onItemClick(int position) {
-//                            Intent intent = new Intent(WorkInfoActivity.this,RoadInfoActivity.class);
-//                            String urrId = (String)list.get(position).get("urrId");
-//                            intent.putExtra("urrId",urrId);
-//                            startActivity(intent);
-                            Toast.makeText(WorkInfoActivity.this,""+list.get(position).get("urrId"),Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(WorkInfoActivity.this,SingleWorkInfoActivity.class);
+                            String urrId = (String)list.get(position).get("urrId");
+                            intent.putExtra("urrId",urrId);
+                            startActivity(intent);
+//                            Toast.makeText(WorkInfoActivity.this,""+list.get(position).get("urrId"),Toast.LENGTH_SHORT).show();
                         }
                     });
                     LinearLayoutManager layoutManager=new LinearLayoutManager(WorkInfoActivity.this);

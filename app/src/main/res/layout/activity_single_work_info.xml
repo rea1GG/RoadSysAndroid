@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_single_student"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingleWorkInfoActivity">
+
+
+    <LinearLayout
+        android:id="@+id/single_work_info"
+        android:layout_width="170dp"
+        android:orientation="vertical"
+        android:layout_height="500dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tv_info_urrId"
+            android:text="工作记录Id:"
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="0.5"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_info_userName"
+            android:text="负责工作用户名："
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_info_prTime"
+            android:text="工作完成时间："
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_info_prInfo"
+            android:text="工作完成状况描述："
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/iv_info_urrFirstpic"
+            android:text="工作时图片："
+
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/iv_info_urrSecondpic"
+            android:text="工作时图片："
+
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/iv_info_urrThirdpic"
+            android:text="工作时图片："
+
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="3"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_info_roadArea"
+            android:text="维修工作所在地区："
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_info_roadName"
+            android:text="维修工作所在街道："
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_info_roadInfo"
+            android:text="维修工作地址详细描述："
+            android:gravity="center"
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_toRightOf = "@+id/single_work_info"
+        android:id="@+id/single_info"
+        android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="500dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/ShowInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/single_work_info"
+        android:text="显示"
+        android:textSize="20dp"
+        android:background="@color/colorAccent"/>
+</RelativeLayout>
