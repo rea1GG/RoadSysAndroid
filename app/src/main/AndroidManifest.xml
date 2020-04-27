@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingleWorkInfoActivity"></activity>
+        <activity android:name=".UploadWorkActivity"></activity>
+        <activity android:name=".SingleWorkInfoActivity" />
         <activity android:name=".QueryWorkTimeActivity" />
         <activity android:name=".QueryWorkNameActivity" />
         <activity android:name=".QueryWorkAreaActivity" />

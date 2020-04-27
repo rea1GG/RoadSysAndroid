@@ -115,7 +115,10 @@ public class ProtectRoadActivity extends AppCompatActivity {
                         public void onItemClick(int position) {
                             Intent intent = new Intent(ProtectRoadActivity.this,RoadInfoActivity.class);
                             String prId = (String)list.get(position).get("prId");
+                            Intent intent1 = getIntent();
+                            String userId = intent1.getStringExtra("userId");
                             intent.putExtra("prId",prId);
+                            intent.putExtra("userId",userId);
                             startActivity(intent);
 //                            Toast.makeText(ProtectRoadActivity.this,"您点击了"+list.get(position).get("prId")+"行", Toast.LENGTH_SHORT).show();
                         }

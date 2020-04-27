@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadWorkActivity">
+
+
+    <TextView
+        android:id="@+id/urrInfoTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:text="工作情况描述："/>
+    <EditText
+        android:id="@+id/urrInfo"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/urrInfoTag"
+        android:layout_marginLeft="40dp"
+        android:hint="工作完成情况"
+        android:textSize="20dp"/>
+
+
+    <Button
+        android:id="@+id/uploadFirst"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/urrInfo"
+        android:layout_marginLeft="40dp"
+        android:text="选择工作前该道路的图片"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/urrFirstpic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/uploadFirst"
+        android:background="@color/colorAccent"/>
+    <Button
+        android:id="@+id/uploadSecond"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/urrInfo"
+        android:layout_toRightOf="@+id/uploadFirst"
+        android:layout_marginLeft="30dp"
+        android:text="选择工作时该道路的图片"
+        android:textSize="20dp" />
+    <ImageView
+        android:id="@+id/urrSecondpic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_toRightOf="@+id/urrFirstpic"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/uploadSecond"
+        android:background="@color/colorAccent"/>
+    <Button
+        android:id="@+id/uploadThird"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/urrSecondpic"
+        android:layout_marginLeft="40dp"
+        android:text="选择工作后该道路的图片"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/urrThirdpic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/uploadThird"
+        android:background="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/btn_upload_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/urrThirdpic"
+        android:layout_marginLeft="150dp"
+        android:text="上传"/>
+</RelativeLayout>

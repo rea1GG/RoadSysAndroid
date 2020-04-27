@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.method.CharacterPickerDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -68,12 +69,13 @@ public class RoadInfoActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_road_info);
-        Button a = (Button) findViewById(R.id.ProtectRoad);
+        Button a = (Button) findViewById(R.id.road_info_show);
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = getIntent();
                 String Id = intent.getStringExtra("prId");
+
                 recyclerView = (RecyclerView) findViewById(R.id.recycler);
                 HttpUtil.sendOkHttpRequest("http://192.168.76.1:8080/android/need/query/id/" + Id, new Callback() {
 
@@ -88,6 +90,22 @@ public class RoadInfoActivity extends AppCompatActivity {
                         changeWithJSONObject(responseData);
                     }
                 });
+            }
+        });
+        Button b = (Button)findViewById(R.id.ProtectRoad);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = getIntent();
+                String prId = intent.getStringExtra("prId");
+                System.out.println(prId);
+                String userId = intent.getStringExtra("userId");
+                System.out.println(userId);
+                System.out.println("1111111111111111111111111111111111111111111111111111");
+                Intent goToUploadWork = new Intent(RoadInfoActivity.this,UploadWorkActivity.class);
+                goToUploadWork.putExtra("prId",prId);
+                goToUploadWork.putExtra("userId",userId);
+                startActivity(goToUploadWork);
             }
         });
 

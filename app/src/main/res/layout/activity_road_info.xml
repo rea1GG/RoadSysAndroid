@@ -81,10 +81,19 @@
 
         </androidx.recyclerview.widget.RecyclerView>
         <Button
+            android:id="@+id/road_info_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:layout_below="@+id/info"
+            android:text="显示"
+            android:textSize="20dp"
+            android:background="@color/colorAccent"/>
+        <Button
             android:id="@+id/ProtectRoad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="250dp"
             android:layout_below="@+id/info"
             android:text="维修该道路"
             android:textSize="20dp"
