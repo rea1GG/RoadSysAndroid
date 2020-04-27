@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_single_student"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QueryWorkTimeActivity">
+    <LinearLayout
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_wi_begin_year"
+            android:hint="请输入起始年份"
+            android:layout_width="100dp"
+            android:textSize="12dp"
+            android:layout_height="50dp"
+            android:maxLength="4"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="年"/>
+        <EditText
+            android:id="@+id/et_wi_begin_month"
+            android:hint="请输入起始月份"
+            android:layout_width="100dp"
+            android:textSize="12dp"
+            android:layout_height="50dp"
+            android:maxLength="2"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="月"/>
+        <EditText
+            android:id="@+id/et_wi_begin_day"
+            android:hint="请输入起始天"
+            android:layout_width="100dp"
+            android:textSize="12dp"
+            android:maxLength="2"
+            android:layout_height="50dp"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="日"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_end"
+        android:layout_below="@id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_wi_end_year"
+            android:hint="请输入起始年份"
+            android:layout_width="100dp"
+            android:textSize="12dp"
+            android:layout_height="50dp"
+            android:maxLength="4"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="年"/>
+        <EditText
+            android:id="@+id/et_wi_end_month"
+            android:hint="请输入起始月份"
+            android:layout_width="100dp"
+            android:textSize="12dp"
+            android:layout_height="50dp"
+            android:maxLength="2"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="月"/>
+        <EditText
+            android:id="@+id/et_wi_end_day"
+            android:hint="请输入起始天"
+            android:layout_width="100dp"
+            android:textSize="12dp"
+            android:layout_height="50dp"
+            android:maxLength="2"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="日"/>
+
+        <Button
+            android:id="@+id/btn_look"
+            android:text="查看"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/work_info_query_name"
+        android:layout_below="@+id/edit_end"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_wi_name_urrId"
+            android:text="ID"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_name_userName"
+            android:text="用户名"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_name_urrTime"
+            android:text="时间"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_name_urrInfo"
+            android:text="描述"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/tv_wi_name_roadArea"
+            android:text="地区"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_wi_name_roadName"
+            android:text="街道"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/work_info_view"
+        android:layout_below="@+id/work_info_query_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

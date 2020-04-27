@@ -40,6 +40,7 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:gravity="center"
+            android:onClick="goToQueryTimeWorkInfo"
             android:text="按时间查询工作记录" />
 
         <Button
