@@ -99,18 +99,26 @@
             android:textSize="20dp"
             android:text="日"/>
 
-        <Button
-            android:id="@+id/btn_look"
-            android:text="查看"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"/>
 
 
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/work_info_query_name"
         android:layout_below="@+id/edit_end"
+        android:id="@+id/linearQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+
+            android:id="@+id/btn_look"
+            android:text="查看"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/work_info_query_name"
+        android:layout_below="@+id/linearQuery"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="50dp">
