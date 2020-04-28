@@ -24,6 +24,7 @@ import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -148,12 +149,7 @@ public class UploadActivity extends AppCompatActivity {
                 startActivity(goBack);
             }
         });
-//        addBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                initPopUpWindow(v);
-//            }
-//        });
+
     }
 
     //弹出选择菜单
@@ -172,7 +168,7 @@ public class UploadActivity extends AppCompatActivity {
             }
         });
 
-        popupWindow.showAsDropDown(v);
+        popupWindow.showAtLocation(v, Gravity.CENTER | Gravity.BOTTOM,0,0);
 
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override

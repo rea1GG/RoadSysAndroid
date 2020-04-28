@@ -6,6 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="150dp"
+        android:background="@mipmap/welcome"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -16,7 +23,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.154" />
 
     <Button
         android:id="@+id/login"

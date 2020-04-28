@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.format.DateFormat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -119,8 +120,8 @@ public class UploadWorkActivity extends AppCompatActivity {
     //弹出选择菜单
     public void initPopUpWindow1(View v) {
         View view = LayoutInflater.from(context).inflate(R.layout.popup, null, false);
-        Button takePictBtn1 = (Button) view.findViewById(R.id.picture_selector_take_photo_btn);
-        Button selectPicBtn1 = (Button) view.findViewById(R.id.picture_selector_pick_picture_btn);
+        Button takePictBtn = (Button) view.findViewById(R.id.picture_selector_take_photo_btn);
+        Button selectPicBtn = (Button) view.findViewById(R.id.picture_selector_pick_picture_btn);
         Button cancelBtn = (Button) view.findViewById(R.id.picture_selector_cancel_btn);
         final PopupWindow popupWindow = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setTouchable(true);
@@ -132,7 +133,7 @@ public class UploadWorkActivity extends AppCompatActivity {
             }
         });
 
-        popupWindow.showAsDropDown(v);
+        popupWindow.showAtLocation(v, Gravity.CENTER | Gravity.BOTTOM,0,0);
 
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
